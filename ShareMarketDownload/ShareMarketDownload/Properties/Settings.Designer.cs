@@ -34,7 +34,7 @@ namespace ShareMarketDownload.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("HHU7MO8QY8EMJLY6")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DEMO")]
         public string ApiKey {
             get {
                 return ((string)(this["ApiKey"]));
