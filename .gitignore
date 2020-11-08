@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ShareMarketDownload/.vs/ShareMarketDownload
+/ShareMarketDownload/ShareMarketDownload/bin/Debug/net5.0
+/ShareMarketDownload/ShareMarketDownload/obj
