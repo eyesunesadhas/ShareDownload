@@ -66,14 +66,14 @@
             this.lblClock});
             this.SBar.Location = new System.Drawing.Point(0, 611);
             this.SBar.Name = "SBar";
-            this.SBar.Size = new System.Drawing.Size(1386, 22);
+            this.SBar.Size = new System.Drawing.Size(1138, 22);
             this.SBar.TabIndex = 0;
             this.SBar.Text = "statusStrip1";
             // 
             // lblMessage
             // 
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(1198, 17);
+            this.lblMessage.Size = new System.Drawing.Size(950, 17);
             this.lblMessage.Spring = true;
             this.lblMessage.Text = "Ready";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -112,36 +112,36 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.Grid);
-            this.splitContainer1.Size = new System.Drawing.Size(1386, 611);
+            this.splitContainer1.Size = new System.Drawing.Size(1138, 611);
             this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 1;
             this.splitContainer1.Text = "splitContainer1";
             // 
             // txtProcessRate
             // 
-            this.txtProcessRate.Location = new System.Drawing.Point(971, 67);
+            this.txtProcessRate.Location = new System.Drawing.Point(1003, 67);
             this.txtProcessRate.Name = "txtProcessRate";
-            this.txtProcessRate.Size = new System.Drawing.Size(180, 23);
+            this.txtProcessRate.Size = new System.Drawing.Size(123, 23);
             this.txtProcessRate.TabIndex = 6;
             // 
             // txtEndTime
             // 
-            this.txtEndTime.Location = new System.Drawing.Point(970, 38);
+            this.txtEndTime.Location = new System.Drawing.Point(1002, 38);
             this.txtEndTime.Name = "txtEndTime";
-            this.txtEndTime.Size = new System.Drawing.Size(179, 23);
+            this.txtEndTime.Size = new System.Drawing.Size(124, 23);
             this.txtEndTime.TabIndex = 5;
             // 
             // txtStartTime
             // 
-            this.txtStartTime.Location = new System.Drawing.Point(970, 11);
+            this.txtStartTime.Location = new System.Drawing.Point(1002, 11);
             this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(179, 23);
+            this.txtStartTime.Size = new System.Drawing.Size(124, 23);
             this.txtStartTime.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(897, 71);
+            this.label4.Location = new System.Drawing.Point(929, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 15);
             this.label4.TabIndex = 4;
@@ -150,7 +150,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(896, 42);
+            this.label3.Location = new System.Drawing.Point(928, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 15);
             this.label3.TabIndex = 4;
@@ -159,7 +159,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(897, 14);
+            this.label2.Location = new System.Drawing.Point(929, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 4;
@@ -212,7 +212,7 @@
             this.Grid.Location = new System.Drawing.Point(0, 0);
             this.Grid.Name = "Grid";
             this.Grid.ReadOnly = true;
-            this.Grid.Size = new System.Drawing.Size(1386, 357);
+            this.Grid.Size = new System.Drawing.Size(1138, 357);
             this.Grid.TabIndex = 0;
             this.Grid.Text = "dataGridView1";
             // 
@@ -220,7 +220,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 633);
+            this.ClientSize = new System.Drawing.Size(1138, 633);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.SBar);
             this.Name = "ShareValueDownload";

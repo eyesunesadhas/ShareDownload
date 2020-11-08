@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -41,6 +42,8 @@ namespace ShareMarketDownload
                 TimerDownload.Interval = 1000 * Settings.Default.WaitTime2Call;
                 TimerDownload.Enabled = true;
                 TimerDownload.Start();
+                txtStartTime.Text = $"{DateTime.Now:HH:mm:ss.ffffff}";
+                txtEndTime.Text = string.Empty;
                 _ = await DownloadData();
                 ShowMessage("Done");
             }
@@ -115,21 +118,18 @@ namespace ShareMarketDownload
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (dt is null || dt.Rows.Count == 0 || currentRow >= maxRow)
+                if(NoRecord2Porcess())
                 {
-                    ShowMessage("No more Data to process");
-                    TimerDownload.Stop();
-                    TimerDownload.Enabled = true;
-                    PBar.Visible = false;
-                    btnStop.Enabled = false;
-                    btnStart.Enabled = true;
                     return true;
                 }
+               
                 PBar.Visible = true;
                 row = dt.Rows[currentRow];
                 string share = row["Share"].ToString();
                 row["StartTime"] = DateTime.Now.ToString("HH:mm:ss.ffffff");
+                PBar.Maximum = maxRow;
                 PBar.Value = currentRow++;
+                txtProcessRate.Text = $"{currentRow} / {maxRow}";
                 if (string.IsNullOrEmpty(share))
                 {
                     row["Status"] = "Fail";
@@ -138,7 +138,6 @@ namespace ShareMarketDownload
                 }
                 AlphaVantagAPI shareApi = new AlphaVantagAPI();
                 ShowMessage($"Downloading Data {share}");
-                //string output = 
                 OutData<string> output = await shareApi.GetShareIntradayCsv(share);
                 string fileName = $@"{Settings.Default.LoggingFolder}\{share}.csv";
                 if (output.StatusList.Count > 0)
@@ -147,8 +146,12 @@ namespace ShareMarketDownload
                     row["Message"] = output.StatusList[0].Description;
                     return true;
                 }
-                File.WriteAllText(fileName, output.Data);
                 row["Status"] = "Success";
+                File.WriteAllText(fileName, output.Data);
+                if (NoRecord2Porcess())
+                {
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -162,6 +165,22 @@ namespace ShareMarketDownload
                 ShowMessage(ex.Message);
             }
             return true;
+        }
+
+        private bool NoRecord2Porcess()
+        {
+            if (dt is null || dt.Rows.Count == 0 || currentRow >= maxRow)
+            {
+                ShowMessage("No more Data to process");
+                TimerDownload.Stop();
+                TimerDownload.Enabled = true;
+                PBar.Visible = false;
+                btnStop.Enabled = false;
+                btnStart.Enabled = true;
+                txtEndTime.Text = $"{DateTime.Now:HH:mm:ss.ffffff}";
+                return true;
+            }
+            return false;
         }
     }
 }
