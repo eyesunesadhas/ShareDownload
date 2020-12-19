@@ -1,0 +1,3 @@
+﻿CREATE SYNONYM SPLG_Y1
+   FOR AuditAccessSpDetail_T1
+GO

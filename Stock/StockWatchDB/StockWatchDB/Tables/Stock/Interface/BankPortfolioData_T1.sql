@@ -1,0 +1,13 @@
+﻿CREATE TABLE BankPortfolioData_T1
+(
+	  BankAccount_ID VARCHAR(20) NOT NULL ,
+	  Trade_CODE VARCHAR(15) NOT NULL,
+	  Trade_NAME VARCHAR (255) NULL,
+	  Shares_CNT NUMERIC(11,4) NOT NULL,
+	  CostBasis_AMNT MONEY NOT NULL,
+	  Value_AMNT   MONEY NULL,
+	  Export_DATE DATE NULL,
+	  Account_ID INT NULL ,
+	  Update_DTTM    DATETIME2 (7) DEFAULT SYSUTCDATETIME ()
+)
+-- BFOLD

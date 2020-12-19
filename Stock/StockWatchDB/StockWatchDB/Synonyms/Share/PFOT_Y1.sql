@@ -1,0 +1,2 @@
+﻿CREATE SYNONYM PFOT_Y1
+	FOR PortfolioTrans_T1

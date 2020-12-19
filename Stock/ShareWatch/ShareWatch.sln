@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareWatch", "ShareWatch\ShareWatch.csproj", "{B56FB889-FB43-4FA3-99B7-E3785E5CB0D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProDataGridViewColumns", "..\ProDataGridViewColumns\ProDataGridViewColumns\ProDataGridViewColumns.csproj", "{F5309A0F-FF76-48C3-8C4D-C18B7DB5B73D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B56FB889-FB43-4FA3-99B7-E3785E5CB0D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B56FB889-FB43-4FA3-99B7-E3785E5CB0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B56FB889-FB43-4FA3-99B7-E3785E5CB0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B56FB889-FB43-4FA3-99B7-E3785E5CB0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5309A0F-FF76-48C3-8C4D-C18B7DB5B73D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5309A0F-FF76-48C3-8C4D-C18B7DB5B73D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5309A0F-FF76-48C3-8C4D-C18B7DB5B73D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5309A0F-FF76-48C3-8C4D-C18B7DB5B73D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E87882F6-4D7B-4BAF-98E8-87A010F279DA}
+	EndGlobalSection
+EndGlobal

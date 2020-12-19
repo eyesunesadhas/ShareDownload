@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>StockWatchDB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f25c7dce-b902-418c-8151-a6b68721b291}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>StockWatchDB</RootNamespace>
+    <AssemblyName>StockWatchDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <Recovery>SIMPLE</Recovery>
+    <AutoShrink>True</AutoShrink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Programmablity" />
+    <Folder Include="Synonyms" />
+    <Folder Include="Programmablity\Stored Procedures" />
+    <Folder Include="Programmablity\Functions" />
+    <Folder Include="Programmablity\Sequences" />
+    <Folder Include="Tables\Audit" />
+    <Folder Include="Tables\Common" />
+    <Folder Include="Tables\Lookup" />
+    <Folder Include="Programmablity\Stored Procedures\Audit" />
+    <Folder Include="Programmablity\Stored Procedures\Lookup" />
+    <Folder Include="Programmablity\Stored Procedures\Common" />
+    <Folder Include="Synonyms\Audit" />
+    <Folder Include="Synonyms\Common" />
+    <Folder Include="Synonyms\Lookup" />
+    <Folder Include="Tables\Stock" />
+    <Folder Include="Synonyms\Share" />
+    <Folder Include="Programmablity\Stored Procedures\Share" />
+    <Folder Include="Programmablity\Stored Procedures\Share\BANK" />
+    <Folder Include="Programmablity\Stored Procedures\Share\SHRM" />
+    <Folder Include="Programmablity\Stored Procedures\Share\SHRV" />
+    <Folder Include="Programmablity\Stored Procedures\Share\PFOL" />
+    <Folder Include="Programmablity\Stored Procedures\Share\PFOT" />
+    <Folder Include="SeedData" />
+    <Folder Include="Programmablity\Stored Procedures\Share\STDV" />
+    <Folder Include="Programmablity\Stored Procedures\Share\Batch" />
+    <Folder Include="Tables\Stock\Interface" />
+    <Folder Include="Programmablity\Stored Procedures\Share\Interface" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Audit\AuditAccessErrorDetail_T1.sql" />
+    <Build Include="Tables\Audit\AuditAccessLogin_T1.sql" />
+    <Build Include="Tables\Audit\AuditAccessSpDetail_T1.sql" />
+    <Build Include="Tables\Audit\AuditAccessUserDetail_T1.sql" />
+    <Build Include="Tables\Common\GlobalEvent_T1.sql" />
+    <Build Include="Tables\Lookup\RefErrorMessage_T1.sql" />
+    <Build Include="Tables\Lookup\RefMaintenance_T1.sql" />
+    <Build Include="Tables\Lookup\RefRoles_T1.sql" />
+    <Build Include="Tables\Lookup\RefScreen_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Audit\ACLG_INSERT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Lookup\REFM_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Lookup\EMSG_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Common\BATCH_COMMON_SP_GET_ERROR_DESCRIPTION.sql" />
+    <Build Include="Programmablity\Stored Procedures\Common\BATCH_COMMON_SP_GEN_SEQ_TXN_EVENT.sql" />
+    <Build Include="Programmablity\Stored Procedures\Common\BATCH_COMMON_SCALAR_SF_SYS_DATE_TIME.sql" />
+    <Build Include="Programmablity\Stored Procedures\Audit\SPLG_INSERT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Audit\ERLG_INSERT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Audit\AULG_INSERT_S1.sql" />
+    <Build Include="Synonyms\Audit\ACLG_Y1.sql" />
+    <Build Include="Synonyms\Audit\SPLG_Y1.sql" />
+    <Build Include="Synonyms\Audit\ERLG_Y1.sql" />
+    <Build Include="Synonyms\Audit\AULG_Y1.sql" />
+    <Build Include="Synonyms\Common\GLEC_Y1.sql" />
+    <Build Include="Synonyms\Lookup\EMSG_Y1.sql" />
+    <Build Include="Synonyms\Lookup\REFM_Y1.sql" />
+    <Build Include="Synonyms\Lookup\ROLE_Y1.sql" />
+    <Build Include="Synonyms\Lookup\SCRN_Y1.sql" />
+    <Build Include="Tables\Stock\ShareMaster_T1.sql" />
+    <Build Include="Tables\Stock\ShareMarketValue_T1.sql" />
+    <Build Include="Tables\Stock\AccountMaster_T1.sql" />
+    <Build Include="Tables\Stock\Portfolio_T1.sql" />
+    <Build Include="Tables\Stock\PortfolioTrans_T1.sql" />
+    <Build Include="Synonyms\Share\BANK_Y1.sql" />
+    <Build Include="Synonyms\Share\SHRM_Y1.sql" />
+    <Build Include="Synonyms\Share\PFOL_Y1.sql" />
+    <Build Include="Synonyms\Share\PFOT_Y1.sql" />
+    <Build Include="Synonyms\Share\SHRV_Y1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\BANK\BANK_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\BANK\BANK_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\BANK\BANK_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\BANK\BANK_SELECT_S2.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRM\SHRM_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRM\SHRM_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRM\SHRM_SELECT_S2.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRV\SHRV_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRV\SHRV_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRV\SHRV_SELECT_S2.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_SELECT_S2.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOL\PFOL_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOL\PFOL_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOL\PFOL_SELECT_S2.sql" />
+    <Build Include="SeedData\SEED_DATA_RefErrorMessage_T1.sql" />
+    <Build Include="SeedData\SEED_DATA_RefMaintenance_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOL\PFOL_SELECT_SUMM_S3.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRV\SHRV_SELECT_REVIEW_S3.sql" />
+    <Build Include="SeedData\SEED_DATA_ShareMaster_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_SELECT_S3.sql" />
+    <Build Include="Tables\Stock\ShareTradeValue_T1.sql" />
+    <Build Include="Synonyms\Share\STDV_Y1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\STDV\STDV_SAVE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\STDV\STDV_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Batch\BATCH_UPDATE_LAST_SOLD_RATE.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOL\PFOL_SAVE_COST_BASIS_S2.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_SELECT_TRAN_S1.sql" />
+    <Build Include="Tables\Stock\Interface\BankPortfolioData_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOL_UPDATE_ACCOUNT_S1.sql" />
+    <Build Include="Tables\Stock\ShareMarketValueHist_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\SHRV\SHRV_SELECT_PERF_S3.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOL_DELETE_S1.sql" />
+    <Build Include="Programmablity\Functions\SplitCommaSeperated.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOL_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOL_SELECT_ACCOUNT_TALLY_S1.sql" />
+    <Build Include="Tables\Stock\Interface\BankPortfolioTrans_T1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOT_SELECT_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOT_DELETE_S1.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\Interface\BPFOT_UPDATE_ACCOUNT_S1.sql" />
+    <Build Include="Programmablity\Functions\GetTradeID.sql" />
+    <Build Include="Programmablity\Stored Procedures\Share\PFOT\PFOT_UPDATE_TRADE_ID.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StockWatchDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Script.PostDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="StockWatchDB.refactorlog" />
+  </ItemGroup>
+</Project>

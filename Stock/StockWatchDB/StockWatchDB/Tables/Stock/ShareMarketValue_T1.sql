@@ -1,0 +1,16 @@
+﻿CREATE TABLE ShareMarketValue_T1
+(
+	Trade_CODE VARCHAR(15) NOT NULL,
+	Trade_DATE DATE NULL,
+	Open_AMNT  MONEY NULL ,
+	Close_AMNT  MONEY NULL,
+	Low_AMNT   MONEY NULL ,
+	High_AMNT   MONEY NULL,
+	Current_AMNT  MONEY NULL ,
+	Volume_CNT Bigint,
+	AvgVol_CNT BigInt,
+	TransactionEventSeq_NUMB   NUMERIC (19) NOT NULL,
+    Update_DTTM                DATETIME2 (7) DEFAULT SYSUTCDATETIME (),
+    WorkerUpdate_ID            VARCHAR (36) NULL,
+    CONSTRAINT SHRV_I1 PRIMARY KEY CLUSTERED (Trade_CODE ASC)
+)
