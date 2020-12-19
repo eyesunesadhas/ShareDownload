@@ -35,6 +35,7 @@
             this.PBar = new System.Windows.Forms.ToolStripProgressBar();
             this.lblClock = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.BtnRobinHood = new System.Windows.Forms.Button();
             this.txtProcessRate = new System.Windows.Forms.TextBox();
             this.txtEndTime = new System.Windows.Forms.TextBox();
             this.txtStartTime = new System.Windows.Forms.TextBox();
@@ -98,6 +99,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.BtnRobinHood);
             this.splitContainer1.Panel1.Controls.Add(this.txtProcessRate);
             this.splitContainer1.Panel1.Controls.Add(this.txtEndTime);
             this.splitContainer1.Panel1.Controls.Add(this.txtStartTime);
@@ -116,6 +118,16 @@
             this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.TabIndex = 1;
             this.splitContainer1.Text = "splitContainer1";
+            // 
+            // BtnRobinHood
+            // 
+            this.BtnRobinHood.Location = new System.Drawing.Point(262, 211);
+            this.BtnRobinHood.Name = "BtnRobinHood";
+            this.BtnRobinHood.Size = new System.Drawing.Size(170, 23);
+            this.BtnRobinHood.TabIndex = 7;
+            this.BtnRobinHood.Text = "RobinHood Download";
+            this.BtnRobinHood.UseVisualStyleBackColor = true;
+            this.BtnRobinHood.Click += new System.EventHandler(this.BtnRobinHood_Click);
             // 
             // txtProcessRate
             // 
@@ -257,6 +269,7 @@
         private System.Windows.Forms.ToolStripStatusLabel lblMessage;
         private System.Windows.Forms.ToolStripProgressBar PBar;
         private System.Windows.Forms.ToolStripStatusLabel lblClock;
+        private System.Windows.Forms.Button BtnRobinHood;
     }
 }
 

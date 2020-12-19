@@ -1,4 +1,6 @@
-﻿using ShareMarketDownload.Business;
+﻿using ShareMarketDownload.API.Robinhood;
+using ShareMarketDownload.API.Robinhood.Models;
+using ShareMarketDownload.Business;
 using ShareMarketDownload.Common;
 using ShareMarketDownload.Properties;
 using ShareWatch.API;
@@ -181,6 +183,33 @@ namespace ShareMarketDownload
                 return true;
             }
             return false;
+        }
+
+        private async void BtnRobinHood_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                ShowMessage("Please Wait...");
+                RobinHoodApi api = new RobinHoodApi();
+                LoginData input = new LoginData()
+                {
+                    username = "Ebi.Yesunesadhas@Gmail.com",
+                    password = "AniletGolda"
+                };
+                OutData<string> output = await api.Login(input);
+                ShowMessage("Done");
+            }
+            catch (Exception ex)
+            {
+                ShowMessage(ex.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+
+
         }
     }
 }
