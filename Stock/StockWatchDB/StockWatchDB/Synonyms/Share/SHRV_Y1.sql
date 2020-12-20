@@ -1,2 +1,0 @@
-﻿CREATE SYNONYM SHRV_Y1
-	FOR ShareMarketValue_T1

@@ -1,4 +1,0 @@
-﻿CREATE SYNONYM EMSG_Y1
-   FOR RefErrorMessage_T1;
-GO
-

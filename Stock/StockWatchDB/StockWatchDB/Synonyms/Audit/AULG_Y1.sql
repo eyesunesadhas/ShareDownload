@@ -1,3 +1,0 @@
-﻿CREATE SYNONYM AULG_Y1
-  FOR AuditAccessLogin_T1;
-GO

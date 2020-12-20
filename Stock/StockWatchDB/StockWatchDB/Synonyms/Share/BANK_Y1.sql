@@ -1,2 +1,0 @@
-﻿CREATE SYNONYM BANK_Y1
-	FOR AccountMaster_T1

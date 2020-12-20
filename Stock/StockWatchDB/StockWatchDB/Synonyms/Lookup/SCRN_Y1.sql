@@ -1,2 +1,0 @@
-﻿CREATE SYNONYM SCRN_Y1
-FOR RefScreen_T1;

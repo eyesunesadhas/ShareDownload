@@ -1,3 +1,0 @@
-﻿CREATE SYNONYM ERLG_Y1
-	FOR AuditAccessErrorDetail_T1;
-GO
